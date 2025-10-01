@@ -1,53 +1,87 @@
-# Welcome to your Expo app 👋
+# Mobile Development Setup with Expo Go
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## Objective
+Mobile development typically demands more computational resources than web development. To simplify this, we are using the **Expo Framework for React Native**, which makes mobile app development and testing more efficient.
 
-## Get started
+This setup ensures a smooth development experience by leveraging **Expo Go** to test applications directly on physical devices.
 
-1. Install dependencies
+---
 
-   ```bash
-   npm install
-   ```
+## Prerequisites
+Before setting up Expo Go, make sure you already have:
 
-2. Start the app
+- ✅ Node.js LTS installed  
+- ✅ VS Code (recommended IDE)  
+- ✅ A compatible OS: macOS, Linux, or Windows  
+- ✅ A physical mobile device (Android or iOS)
 
-   ```bash
-   npx expo start
-   ```
+---
 
-In the output, you'll find options to open the app in a
+## Why Expo Go?
+Testing mobile apps usually requires emulators, which demand significant system resources and may not always reflect real-world performance.  
+Expo Go solves this problem by allowing developers to:
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- Run and test React Native applications on physical devices.  
+- Avoid the need for costly emulators and extra hardware.  
+- Support both **Android** and **iOS** devices seamlessly.  
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+---
 
-## Get a fresh project
+## Steps to Install Expo Go
 
-When you're ready, run:
+1. Visit the official Expo Go homepage: [https://expo.dev/go](https://expo.dev/go).  
+2. Select the latest SDK version.  
+3. Install Expo Go on your device:  
+   - **Android**: Install from the [Google Play Store](https://play.google.com/store/apps/details?id=host.exp.exponent).  
+   - **iOS**: Install from the [Apple App Store](https://apps.apple.com/app/expo-go/id982107779).  
+4. Open the **Expo Go** app on your phone.  
+5. Create a new account or log in with your existing Expo account.  
 
-```bash
-npm run reset-project
-```
+---
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Challenges Faced
 
-## Learn more
+During the setup of Expo Go, I faced the following issues:
 
-To learn more about developing your project with Expo, look at the following resources:
+1. **Slow Internet Download**
+   - The Expo Go app took longer than expected to download due to unstable internet.  
+   - ✅ Solution: Paused and retried the download after switching to a stronger Wi-Fi connection.  
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+2. **Account Creation**
+   - Initially tried logging in without an Expo account.  
+   - ✅ Solution: Created a free Expo account at [expo.dev](https://expo.dev) to proceed.  
 
-## Join the community
+3. **App Permissions**
+   - On Android, Expo Go required camera permission to scan QR codes.  
+   - ✅ Solution: Enabled permissions manually in device settings.  
 
-Join our community of developers creating universal apps.
+4. **SDK Version Mismatch**
+   - When testing the demo app, the installed Expo Go version did not support the latest SDK.  
+   - ✅ Solution: Updated Expo Go from the Google Play Store to match the SDK.  
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+These challenges were resolved, and Expo Go is now running successfully on my device.
+
+---
+
+## Troubleshooting
+
+Here are some common issues and fixes when working with Expo Go:
+
+1. **App Not Loading / White Screen**
+   - Clear cache by uninstalling and reinstalling the Expo Go app.  
+
+2. **QR Code Not Scanning**
+   - Ensure camera permissions are enabled in device settings.  
+   - Try switching to **manual input** (entering the URL shown in the terminal into Expo Go).  
+
+3. **Metro Bundler Not Connecting**
+   - Ensure both your computer and phone are on the **same Wi-Fi network**.  
+   - If issues persist, restart Metro with:  
+     ```bash
+     npm start -- --reset-cache
+     ```  
+
+4. **Node.js Compatibilit**
 
 # ProDev Mobile App Setup
 
@@ -64,3 +98,4 @@ This project was created as part of the mobile development setup tasks using Exp
    cd prodev-mobile-setup
    mkdir prodev-mobile-app-0x00
    cd prodev-mobile-app-0x00
+
