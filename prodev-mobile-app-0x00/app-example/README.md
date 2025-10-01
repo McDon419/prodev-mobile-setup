@@ -48,3 +48,19 @@ Join our community of developers creating universal apps.
 
 - [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
 - [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+
+# ProDev Mobile App Setup
+
+## Project: First React Native App with Expo
+
+This project was created as part of the mobile development setup tasks using Expo and React Native.
+
+---
+
+## Steps Followed for Scaffolding
+
+1. **Navigate to project directory**
+   ```bash
+   cd prodev-mobile-setup
+   mkdir prodev-mobile-app-0x00
+   cd prodev-mobile-app-0x00
